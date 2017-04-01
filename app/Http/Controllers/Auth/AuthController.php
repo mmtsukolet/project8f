@@ -33,6 +33,15 @@ class AuthController extends Controller
 
         try {
 
+            // Sample Hash add this to db
+            // 'test' is the actual password text. Below is how 
+            // to hash pass in Laravel
+            // 
+            // echo "<pre>";
+            //  print_r(Hash::make('test')); 
+            //  die;
+            // echo "</pre>";
+
             if (! $token = $this->jwt->attempt($request->only('email', 'password'))) {
                 return response()->json(
                     ['error'=> true, 'message' => 'User Not Found.'], 404);
