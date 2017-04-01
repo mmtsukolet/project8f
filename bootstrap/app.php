@@ -84,7 +84,7 @@ $app->routeMiddleware([
 |
 */
 
-$app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
+// $app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
 $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
